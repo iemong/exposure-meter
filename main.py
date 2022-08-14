@@ -7,9 +7,10 @@ import hat
 import math
 
 
-def convertLux2Ev(lux):
+def convertLux2Ev(lux, iso=100):
     ev = math.log2(lux / 2.5)
-    return ev
+    step = math.log2(iso / 100)
+    return ev - step
 
 
 setScreenColor(0xffffff)
