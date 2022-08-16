@@ -17,7 +17,7 @@ def calcSS(ev):
     return lambda av: math.floor(1 / (2 ** (-1 * (ev - 2 * math.log2(av)))))
 
 
-setScreenColor(0xffffff)
+setScreenColor(0x111111)
 
 hat_dlight_0 = hat.get(hat.DLIGHT)
 hat_dlight_0.set_mode(0x11)
@@ -26,18 +26,18 @@ f_list = [2, 4, 8, 11]
 iso = 400
 
 lcd.orient(lcd.LANDSCAPE)
-titleLux = M5TextBox(0, 38, "Lux:", lcd.FONT_DejaVu18, 0xff0000, rotate=0)
-valueLux = M5TextBox(45, 38, "lux", lcd.FONT_DejaVu18, 0xff0000, rotate=0)
-titleEv = M5TextBox(0, 90, "EV:", lcd.FONT_DejaVu18, 0xff0000, rotate=0)
-valueEv = M5TextBox(45, 90, "ev", lcd.FONT_DejaVu18, 0xff0000, rotate=0)
-titleF2 = M5TextBox(0, 120, "F2:", lcd.FONT_DejaVu18, 0xff0000, rotate=0)
-titleF4 = M5TextBox(0, 140, "F4:", lcd.FONT_DejaVu18, 0xff0000, rotate=0)
-titleF8 = M5TextBox(0, 160, "F8:", lcd.FONT_DejaVu18, 0xff0000, rotate=0)
-titleF11 = M5TextBox(0, 180, "F11:", lcd.FONT_DejaVu18, 0xff0000, rotate=0)
-valueF2 = M5TextBox(45, 120, "f2", lcd.FONT_DejaVu18, 0xff0000, rotate=0)
-valueF4 = M5TextBox(45, 140, "f4", lcd.FONT_DejaVu18, 0xff0000, rotate=0)
-valueF8 = M5TextBox(45, 160, "f8", lcd.FONT_DejaVu18, 0xff0000, rotate=0)
-valueF11 = M5TextBox(45, 180, "f11", lcd.FONT_DejaVu18, 0xff0000, rotate=0)
+titleLux = M5TextBox(5, 5, "Lux:", lcd.FONT_DejaVu18, 0xffffff, rotate=0)
+valueLux = M5TextBox(50, 5, "lux", lcd.FONT_DejaVu18, 0xffffff, rotate=0)
+titleEv = M5TextBox(100, 5, "EV:", lcd.FONT_DejaVu18, 0xffffff, rotate=0)
+valueEv = M5TextBox(145, 5, "ev", lcd.FONT_DejaVu18, 0xffffff, rotate=0)
+titleF2 = M5TextBox(5, 40, "F2:", lcd.FONT_DejaVu18, 0xffffff, rotate=0)
+titleF4 = M5TextBox(5, 60, "F4:", lcd.FONT_DejaVu18, 0xffffff, rotate=0)
+titleF8 = M5TextBox(5, 80, "F8:", lcd.FONT_DejaVu18, 0xffffff, rotate=0)
+titleF11 = M5TextBox(5, 100, "F11:", lcd.FONT_DejaVu18, 0xffffff, rotate=0)
+valueF2 = M5TextBox(50, 40, "f2", lcd.FONT_DejaVu18, 0xffffff, rotate=0)
+valueF4 = M5TextBox(50, 60, "f4", lcd.FONT_DejaVu18, 0xffffff, rotate=0)
+valueF8 = M5TextBox(50, 80, "f8", lcd.FONT_DejaVu18, 0xffffff, rotate=0)
+valueF11 = M5TextBox(50, 100, "f11", lcd.FONT_DejaVu18, 0xffffff, rotate=0)
 
 
 while True:
