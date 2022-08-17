@@ -24,6 +24,7 @@ hat_dlight_0.set_mode(0x11)
 lux = None
 f_list = [2, 2.8, 4, 5.6, 8, 11, 16]
 iso = 400
+iso_list = list([100, 200, 400, 800])
 
 lcd.orient(lcd.LANDSCAPE)
 # titleLux = M5TextBox(5, 5, "Lux:", lcd.FONT_DejaVu18, 0xffffff, rotate=0)
@@ -46,6 +47,16 @@ valueF5_6 = M5TextBox(60, 100, "f5.6", lcd.FONT_DejaVu18, 0xffffff, rotate=0)
 valueF8 = M5TextBox(185, 40, "f8", lcd.FONT_DejaVu18, 0xffffff, rotate=0)
 valueF11 = M5TextBox(185, 60, "f11", lcd.FONT_DejaVu18, 0xffffff, rotate=0)
 valueF16 = M5TextBox(185, 80, "f16", lcd.FONT_DejaVu18, 0xffffff, rotate=0)
+
+
+def buttonA_wasPressed():
+    global iso
+    i = iso_list.index(iso)
+    next_i = (i + 1) % 4
+    iso = iso_list[next_i]
+
+
+btnA.wasPressed(buttonA_wasPressed)
 
 
 while True:
