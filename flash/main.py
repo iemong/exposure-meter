@@ -27,8 +27,6 @@ iso = 400
 iso_list = list([100, 200, 400, 800])
 
 lcd.orient(lcd.LANDSCAPE)
-# titleLux = M5TextBox(5, 5, "Lux:", lcd.FONT_DejaVu18, 0xffffff, rotate=0)
-# valueLux = M5TextBox(50, 5, "lux", lcd.FONT_DejaVu18, 0xffffff, rotate=0)
 titleEv = M5TextBox(5, 5, "EV:", lcd.FONT_DejaVu18, 0xffffff, rotate=0)
 valueEv = M5TextBox(45, 5, "ev", lcd.FONT_DejaVu18, 0xffffff, rotate=0)
 titleIso = M5TextBox(100, 5, "ISO:", lcd.FONT_DejaVu18, 0xffffff, rotate=0)
@@ -63,7 +61,6 @@ while True:
     lux = hat_dlight_0.get_lux()
     ev = convertLux2Ev(lux, iso)
     tv_list = list(map(calcSS(ev), f_list))
-    # valueLux.setText(str(lux))
     valueEv.setText(str(ev))
     valueIso.setText(str(iso))
     valueF2.setText(str(tv_list[0]))
