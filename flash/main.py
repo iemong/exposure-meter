@@ -8,6 +8,8 @@ import math
 
 
 def convertLux2Ev(lux, iso=100):
+    if lux == 0:
+        return 0
     ev = round(math.log2(lux / 2.5))
     step = math.log2(iso / 100)
     return ev - step
